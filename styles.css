@@ -1,0 +1,29 @@
+
+/* Style your Navigation Bar */
+
+.topnav {   
+    list-style: none;
+    text-align: center;
+    border-width:  0;
+    margin: 0;
+    padding: 30px;
+    display: block;
+    padding-top: 30px;
+    text-decoration: none;
+    background-color: lightgray; 
+ }
+
+ .topnav li {
+        display: inline;
+        float: center;
+        padding:20px 5px;
+        font-family: Georgia;
+        font-size: 20px;
+        line-height: 5mm0px;
+        color: grey;  
+}
+
+ .topnav li:hover {
+    
+    color: rgb(226, 169, 179);
+ }
