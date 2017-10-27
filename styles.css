@@ -1,29 +1,119 @@
 
 /* Style your Navigation Bar */
-
 .topnav {   
     list-style: none;
     text-align: center;
     border-width:  0;
-    margin: 0;
-    padding: 30px;
+    /* CSS code in case I want a border around the nav bar */
+    /* border: 3px solid #333;
+    padding: 30px; */
     display: block;
     padding-top: 30px;
-    text-decoration: none;
-    background-color: lightgray; 
+    text-decoration: none; 
  }
 
  .topnav li {
         display: inline;
         float: center;
         padding:20px 5px;
-        font-family: Georgia;
-        font-size: 20px;
+        font-family: 'Amatic SC';
+        font-size: 25px;
         line-height: 5mm0px;
-        color: grey;  
+} 
+ .topnav li a {
+        text-decoration: none;
+        outline: none;
+        display: inline-block;
+        margin: 0.5em;
+        padding: 0.7em 1.1em;
+        border: 3px solid rgb(11, 83, 97);
+        color: rgb(43, 108, 138);
+        font-weight: 700;
+}  
+
+ /* Styled Elements */
+body {
+    height:auto;
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size: 30px;
+    margin: 60px;
 }
 
- .topnav li:hover {
-    
-    color: rgb(226, 169, 179);
- }
+
+
+/* Footer info */
+.footerDetails{
+  height:auto;
+}
+
+footer{
+  height: auto;
+}
+
+
+ /* Styling for the Social Media Icons */
+.icons a{
+    display: inline;
+    margin: 10px;
+}
+
+ #fb a{
+    /* margin:10px; */
+    color: rgb(21, 21, 77);
+    }
+
+#linkedin a{
+color: rgb(21, 21, 77);
+}
+
+#insta a{
+color: rgb(21, 21, 77); 
+}
+
+/* Image styling for Profil pic on Homepage */
+/* .img-circle {
+    border-radius: 50%;
+    width: 250px;
+    height:310px;
+} */
+
+
+/* Syling for Pictures on the Creative Page */
+
+/* Create four equal columns that floats next to each other */
+.row {
+    box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
