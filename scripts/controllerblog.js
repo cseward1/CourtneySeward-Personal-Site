@@ -1,16 +1,16 @@
 
 // once data is in local Storage - make it accesible to be pulled out unto to the DOM
-const storedResume = localStorage.getItem("completeResume");
-let resumeCompleteDatabase = JSON.parse(storedResume);
+const storedBlog = localStorage.getItem("completeBlog");
+let completeBlog = JSON.parse(storedBlog);
 
 // Now write out the syntax to make it appear on the page
 // doucument. getelement 
 
 document.getElementById("articles").innerHTML = ``
-console.log(resumeCompleteDatabase)
+console.log(completeBlog)
 
 // Write an array.forEach loop for "Education" and styling
-resumeCompleteDatabase.Education.forEach(function(element) {
+completeBlog.Date.forEach(function(element) {
     document.getElementById("articles").innerHTML+= `
     <article class = "educationStyling"> 
     <h1 class="h1EducationStyling"> ${element.school}</h1>
@@ -20,10 +20,10 @@ resumeCompleteDatabase.Education.forEach(function(element) {
 } );
 
 // array.forEach loop for "Work" and Styling 
-resumeCompleteDatabase.Work.forEach(function(element) {
+completeBlog.date.forEach(function(element) {
     document.getElementById("articles").innerHTML+= `
-    <article class = "workStyling"> 
-    <h1 class="h1WorkStyling">  ${element.company}</h1>
+    <article> 
+    <h1 class="h1journalEntry">  ${element.company}</h1>
     <div> ${element.roleInTheCompany}</div>
     <div> ${element.workDuration}</div>
     <div> ${element.jobDescription}</div>

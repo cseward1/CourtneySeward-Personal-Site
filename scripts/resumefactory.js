@@ -3,16 +3,16 @@
 
 // Start Education Storage
 // Create your function 
-const  educationInformation= function (school, concentration, graduationMonthYear,clubs) {
-    return Object.create (null, {
+const  educationInformation= function (school, concentration, graduationMonthYear) {
+	return Object.create (null, {
 
 
-// Establish keys/values wihtin your Object.create for my Education History
-    "school": {value: school, enumerable: true},
-    "concentration": {value: concentration, enumerable:true},
-    "graduationMonthYear": {value:graduationMonthYear, enumerable:true},
-    "clubs": {value:"clubs", enumberable:true}
-}) 
+		// Establish keys/values wihtin your Object.create for my Education History
+		"school": {value: school, enumerable: true},
+		"concentration": {value: concentration, enumerable:true},
+		"graduationMonthYear": {value:graduationMonthYear, enumerable:true},
+		// "clubs": {value:"clubs", enumberable:true}
+	}) 
 }
 // input education information into a new variable. This new variable will be called the "educationInformation" and put in the value as the parameters
 
@@ -24,14 +24,14 @@ const UTK = educationInformation("University of Tennessee, Knoxville", "<strong>
 
 // Start Work Experience Storage
 const workInformation= function (company, roleInTheCompany, workDuration, jobDescription,projects) {
-    return Object.create (null, {
+	return Object.create (null, {
     
-    "company": {value:company, enumerable:true},
-    "roleInTheCompany": {value:roleInTheCompany, enumerable: true},
-    "workDuration": {value:workDuration, enumerable:true},
-    "jobDescription": {value:jobDescription, enumerable:true},
-    "projects": {value:projects, enumerable: true}
-})
+		"company": {value:company, enumerable:true},
+		"roleInTheCompany": {value:roleInTheCompany, enumerable: true},
+		"workDuration": {value:workDuration, enumerable:true},
+		"jobDescription": {value:jobDescription, enumerable:true},
+		"projects": {value:projects, enumerable: true}
+	})
 }
 
 // input Work Experience into a new variable. This new variable will be called the "educationInformation" and put in the value as the parameters
@@ -48,14 +48,14 @@ const Thrive = workInformation("Thrive", "After School Care Teacher", "January 2
 // Start Volunteer Storage
 // Create your function 
 const volunteerInformation= function (organization, dates, role) {
-    return Object.create (null, {
+	return Object.create (null, {
 
-// Establish keys/values wihtin your Object.create for my Volunteer History
+		// Establish keys/values wihtin your Object.create for my Volunteer History
 
-    "organization":{value:organization, enumerable:true},
-    "dates":{value:dates, enumerable: true},
-    "role":{value:role, enumerable:true}
-})
+		"organization":{value:organization, enumerable:true},
+		"dates":{value:dates, enumerable: true},
+		"role":{value:role, enumerable:true}
+	})
 }
 
 // input education information into a new variable. This new variable will be called the "educationInformation" and put in the value as the parameters
@@ -66,25 +66,24 @@ const barCamp = volunteerInformation("BarCamp", "October 20th thru 21st 2017", "
 
 
 // Create arrays to go into the database
-let work = [];
-let education= [];
-let volunteer = [];
+let work = []
+let education= []
+let volunteer = []
 
 // Push objects into their designated array by calling the parameters within them
-education.push(NSS,UTK);
-work.push(Anthropologie, AFP, Thrive);
-volunteer.push(barCamp);
+education.push(NSS,UTK)
+work.push(Anthropologie, AFP, Thrive)
+volunteer.push(barCamp)
 
 // Create a new variable that holds an object that stores an array. 
 const resumeDatabase = {
-    Education : education,
-    Work : work,
-    Volunteer : volunteer
+	Education : education,
+	Work : work,
+	Volunteer : volunteer
 }
-console.log(resumeDatabase)
+// console.log(resumeDatabase)
 // Store data in local storage....
 // make the object into a string and then put it into your local storage
-const completeResume= JSON.stringify(resumeDatabase);
-localStorage.setItem("completeResume", completeResume);
-
+const completeResume= JSON.stringify(resumeDatabase)
+localStorage.setItem("completeResume", completeResume)
 

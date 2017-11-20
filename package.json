@@ -1,0 +1,30 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "\"Personal Site\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cseward1/CourtneySeward-Personal-Site.git"
+  },
+  "keywords": [
+    "Courtney",
+    "Seward",
+    "NSS"
+  ],
+  "author": "Courtney Seward <courtneyseward93@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cseward1/CourtneySeward-Personal-Site/issues"
+  },
+  "homepage": "https://github.com/cseward1/CourtneySeward-Personal-Site#readme",
+  "devDependencies": {
+    "eslint-grunt": "^1.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
