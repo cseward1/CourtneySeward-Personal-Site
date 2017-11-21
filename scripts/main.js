@@ -1,16 +1,17 @@
 
 
 // .ready () - Use ready() to make a function available after the document is loaded
-$(document).ready(function () {
+$(document).ready(function() {
 
 	const outputEl = $(".resumeListing")
 
 	// Create XHR objects (not invoked yet)
-	const getEducation = $.ajax({ url: "./resume/education.json" })
-	const getWork = $.ajax({ url: "./resume/work.json" })
-	const getVolunteer = $.ajax({ url: "./resume/volunteer.json" })
+	const getEducation = $.ajax({ url: "./scripts/resume/education.json" })
+	const getWork = $.ajax({ url: "./scripts/resume/work.json"})
+	const getVolunteer = $.ajax({ url: "./scripts/resume/volunteer.json"})
+	
+	// create a "Catalog" of objects to store education, work, and volunteer information
 
-	// create a Catalog object to store education, work, and the volunteer information
 	const Catalog = Object.create(null, {
 		"education": {
 			value: null,
@@ -23,40 +24,21 @@ $(document).ready(function () {
 		"volunteer": {
 			value: null,
 			writable: true
-		}
-	})
-	// end object.create
+		},
+		// create a function called "display" and call a "for loop" that goes through your "getEducation" to display that information on the inner HTML
+		"display": {
+			value: function () {
+				let finalHTML = ""
+// create a for each loop to call 
+				education.forEach(function(this.education)) {
+				}, this);
+					const currentEducation = this.getEducation[key]
+					if (currentEducation) {
+						const workInformation = this.work.find(w => w.id === currentEducation.work_id)
+						const volunteerInformation = this.volunteer.find(v => v.id === currentEducation.volunteer_id)
 
-	//call the education,work & volunteer data with .then statements
-	getEducation
-		.then(result => {
-			Catalog.education = result.education
-			return getWork
-		})
-		.then(result => {
-			Catalog.work = result.work
-			return getVolunteer
-		})
-		.then(result => {
-			Catalog.volunteer = result.volunteer
-			Catalog.display()
-		})
-	outputEl.innerHTML +=
-
-
-// create a function called "display" and call a "for loop" that goes through your "getEducation"
-"display": {
-	// value: function( ) {
-		let finalHTML = ""
-
-		for (let key in this.getEducation) {
-			const currentEducation = this.getEducation[key]
-			if (currentEducation) {
-				const workInformation = this.work.find(w => w.id === currentEducation.work_id)
-				const volunteerInformation = this.volunteer.find(v => v.id === currentEducation.volunteer_id)
-
-				// call education, work, and volunteer information unto the main page:
-				finalHTML += `
+						// call education, work, and volunteer information unto the main page:
+						finalHTML += `
 					<article id="education!${key}">
 						<h1>${currentEducation.school}</h1>
 						<div>${currentEducation.concentration}</div>
@@ -73,8 +55,29 @@ $(document).ready(function () {
 						<div>Information:${volunteerInformation.role}</div>
 					</article>
 				`
+					}
+				}
+				outputEl.html(finalHTML)
 			}
-
 		}
-		outputEl.html(finalHTML)
-	}
+	})
+	// Load the product & category data
+	//combine your objects with .then statements
+	getEducation
+		.then(result => {
+			Catalog.education = result.education
+			return getWork
+		})
+		.then(result => {
+			Catalog.work = result.work
+			return getVolunteer
+		})
+		.then(result => {
+			Catalog.volunteer = result.volunteer
+			Catalog.display()
+		})		
+})	 
+// objects and functions: 
+// objects represent things and properties describe things 
+// functions represent behaviors 
+// every module you create have an object for it 
