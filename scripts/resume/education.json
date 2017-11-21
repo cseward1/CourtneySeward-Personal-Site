@@ -1,0 +1,17 @@
+{
+    "education": [
+      {
+        "school": "Nashville Software School",
+        "concentration": "Full Stack Web Development Bootcamp",
+        "graduationMonthYear":"Duration of Program: October 2017 - April 2018"
+       
+      },
+      {
+        "school": "University of Tennessee, Knoxville",
+        "concentration": "BA in English, Literature Concentration & Psychology",
+        "graduationMonthYear":"July 2015"
+       
+      }
+    ]
+  }
+ 

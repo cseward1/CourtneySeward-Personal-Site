@@ -25,5 +25,8 @@
             "error",
             "never"
         ]
+    },
+    "globals": {
+        "$": true
     }
 }
