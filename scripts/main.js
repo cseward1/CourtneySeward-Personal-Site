@@ -1,7 +1,7 @@
 
 
 // .ready () - Use ready() to make a function available after the document is loaded
-$(document).ready(function() {
+$(document).ready(function () {
 
 	const outputEl = $(".resumeListing")
 
@@ -30,33 +30,29 @@ $(document).ready(function() {
 			value: function () {
 				let finalHTML = ""
 // create a for each loop to call 
-				education.forEach(function(this.education)) {
-				}, this);
-					const currentEducation = this.getEducation[key]
-					if (currentEducation) {
-						const workInformation = this.work.find(w => w.id === currentEducation.work_id)
-						const volunteerInformation = this.volunteer.find(v => v.id === currentEducation.volunteer_id)
+				this.education.forEach(education => {
+						const educationWork = this.work.find(w => w.id === education.work_id)
+						const educationVolunteer = this.volunteer.find(v => v.id === education.volunteer_id)
 
 						// call education, work, and volunteer information unto the main page:
 						finalHTML += `
-					<article id="education!${key}">
-						<h1>${currentEducation.school}</h1>
-						<div>${currentEducation.concentration}</div>
-						<div>${currentEducation.graduationMonthYear}</div>
+					<article id="education_${education.id}">
+						<h1>${education.school}</h1>
+						<div>${education.concentration}</div>
+						<div>${education.graduationMonthYear}</div>
 
-						<h1>${workInformation.work_id.company}</h1> 
-						<div>Information:${workInformation.roleInTheCompany}</div>
-						<div> Information: ${workInformation.workDuration}</div>
-						<div> Information: ${workInformation.jobDescription}</div>
-						<div> Information: ${workInformation.projects}</div>
+						<h1>${getWork.work_id.company}</h1> 
+						<div>Information:${work.roleInTheCompany}</div>
+						<div> Information: ${work.workDuration}</div>
+						<div> Information: ${work.jobDescription}</div>
+						<div> Information: ${work.projects}</div>
 
 						<h1>${volunteerInformation.volunteer_id.organization}</h1> 
 						<div>Information:${volunteerInformation.dates}</div>
 						<div>Information:${volunteerInformation.role}</div>
 					</article>
 				`
-					}
-				}
+					},
 				outputEl.html(finalHTML)
 			}
 		}
@@ -77,6 +73,9 @@ $(document).ready(function() {
 			Catalog.display()
 		})		
 })	 
+
+
+// STEVES NOTES
 // objects and functions: 
 // objects represent things and properties describe things 
 // functions represent behaviors 
